@@ -8,7 +8,8 @@ var maxSlidingWindow = function(nums, k) {
     let temp = [];
     let count = 0;
     let iteration = 0;
-    for (let i = iteration; i < nums.length; i++) {
+    for (let i = iteration; i <= nums.length; i++) {
+        if (i === nums.length + 1) break;
         if (count !== k) {
             temp.push(nums[i])
             count++;
@@ -30,4 +31,4 @@ var maxSlidingWindow = function(nums, k) {
     console.log(collection);
 };
 
-maxSlidingWindow([5,3,6,7], 3)
+maxSlidingWindow([1,-1], 1)
